@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        {{prods}}
+    </p>
+    <table style="border: solid 1px black;">
+        <thead>
+            <tr>
+                <th style="border: solid 1px black;">Id</th>
+                <th style="border: solid 1px black;">Name</th>
+                <th style="border: solid 1px black;">Buying Price</th>
+                <th style="border: solid 1px black;">Selling Price</th>
+                <th style="border: solid 1px black;">Quantity</th>
+            </tr>
+        </thead >
+        <tbody style="border: solid 1px black;">
+            {% for prod in prods%}
+            <tr>
+                <td>{{prod[0]}}</td>
+                <td>{{prod[1]}}</td>
+                <td>{{prod[2]}}</td>
+                <td>{{prod[3]}}</td>
+                <td>{{prod[4]}}</td>
+            </tr>
+            {% endfor%}
+        </tbody>
+    </table>
+</body>
+</html>
